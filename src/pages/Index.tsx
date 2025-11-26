@@ -41,18 +41,18 @@ const Index = () => {
       features: ['Снятие мерок', 'Выбор ткани', 'Примерки', 'Корректировка']
     },
     {
-      title: 'Ремонт и подгонка',
-      description: 'Профессиональная корректировка и ремонт одежды',
-      price: 'от 500₽',
-      icon: 'Wrench',
-      features: ['Подгонка по фигуре', 'Замена молний', 'Ушивка', 'Удлинение']
-    },
-    {
       title: 'Дизайнерские модели',
       description: 'Эксклюзивные авторские коллекции',
       price: 'от 30000₽',
       icon: 'Sparkles',
       features: ['Уникальный дизайн', 'Премиум ткани', 'Ручная работа', 'Консультация дизайнера']
+    },
+    {
+      title: 'Доставка',
+      description: 'Доставим готовое изделие к вам домой или в офис',
+      price: 'Бесплатно',
+      icon: 'Truck',
+      features: ['По Ростову-на-Дону', 'По области', 'Примерка при получении', 'Гарантия качества']
     },
   ];
 
@@ -74,14 +74,14 @@ const Index = () => {
     { service: 'Рубашка', price: '8000₽' },
     { service: 'Брюки', price: '10000₽' },
     { service: 'Юбка', price: '7000₽' },
-    { service: 'Подгонка по фигуре', price: 'от 2000₽' },
-    { service: 'Замена молнии', price: 'от 800₽' },
+    { service: 'Доставка по Ростову', price: 'Бесплатно' },
+    { service: 'Доставка по области', price: 'от 500₽' },
   ];
 
   const faqs = [
     {
       question: 'Как происходит процесс заказа?',
-      answer: 'Вы оставляете заявку, мы приглашаем вас на консультацию, снимаем мерки, помогаем выбрать ткань и фасон. Затем проходят 1-2 примерки, после чего вы получаете готовое изделие.'
+      answer: 'Вы оставляете заявку, мы приглашаем вас на консультацию, снимаем мерки, помогаем выбрать ткань и фасон. Затем проходят 1-2 примерки, после чего доставляем готовое изделие к вам домой.'
     },
     {
       question: 'Сколько времени занимает пошив?',
@@ -111,7 +111,7 @@ const Index = () => {
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Icon name="Scissors" className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold">Atelier Luxe</span>
+            <span className="text-xl font-bold">Semona</span>
           </div>
           <nav className="hidden md:flex gap-6">
             <a href="#services" className="text-sm font-medium hover:text-primary transition-colors">Услуги</a>
@@ -138,7 +138,7 @@ const Index = () => {
               Создаём одежду вашей мечты
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Профессиональное ателье с 15-летним опытом. Индивидуальный подход, премиум материалы, безупречное качество.
+              Профессиональное ателье с 15-летним опытом. Индивидуальный пошив, доставка на дом, премиум материалы.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" onClick={() => setShowMeasurements(!showMeasurements)}>
@@ -162,7 +162,7 @@ const Index = () => {
             <h2 className="text-4xl font-bold mb-4">Наши услуги</h2>
             <p className="text-muted-foreground text-lg">Полный спектр услуг для создания идеальной одежды</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {services.map((service, i) => (
               <Card key={i} className="hover:shadow-lg transition-all hover:scale-105 animate-scale-in" style={{ animationDelay: `${i * 0.1}s` }}>
                 <CardHeader>
@@ -324,7 +324,7 @@ const Index = () => {
                   <Icon name="MapPin" className="h-5 w-5 text-primary mt-0.5" />
                   <div>
                     <div className="font-medium">Адрес</div>
-                    <div className="text-sm text-muted-foreground">г. Москва, ул. Тверская, д. 10</div>
+                    <div className="text-sm text-muted-foreground">г. Ростов-на-Дону, ул. Маршала Жукова, д. 25</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -338,7 +338,7 @@ const Index = () => {
                   <Icon name="Mail" className="h-5 w-5 text-primary mt-0.5" />
                   <div>
                     <div className="font-medium">Email</div>
-                    <div className="text-sm text-muted-foreground">info@atelier-luxe.ru</div>
+                    <div className="text-sm text-muted-foreground">info@semona.ru</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -505,18 +505,18 @@ const Index = () => {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <Icon name="Scissors" className="h-6 w-6 text-primary" />
-                <span className="text-xl font-bold">Atelier Luxe</span>
+                <span className="text-xl font-bold">Semona</span>
               </div>
               <p className="text-sm text-muted-foreground">
-                Создаём одежду вашей мечты с 2010 года
+                Индивидуальный пошив и доставка с 2010 года
               </p>
             </div>
             <div>
               <h3 className="font-semibold mb-4">Услуги</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><a href="#services" className="hover:text-primary transition-colors">Индивидуальный пошив</a></li>
-                <li><a href="#services" className="hover:text-primary transition-colors">Ремонт одежды</a></li>
                 <li><a href="#services" className="hover:text-primary transition-colors">Дизайнерские модели</a></li>
+                <li><a href="#services" className="hover:text-primary transition-colors">Доставка на дом</a></li>
               </ul>
             </div>
             <div>
@@ -531,13 +531,13 @@ const Index = () => {
               <h3 className="font-semibold mb-4">Контакты</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>+7 (495) 123-45-67</li>
-                <li>info@atelier-luxe.ru</li>
-                <li>г. Москва, ул. Тверская, 10</li>
+                <li>info@semona.ru</li>
+                <li>г. Ростов-на-Дону, ул. Маршала Жукова, 25</li>
               </ul>
             </div>
           </div>
           <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2024 Atelier Luxe. Все права защищены.</p>
+            <p>&copy; 2024 Semona. Все права защищены.</p>
           </div>
         </div>
       </footer>
