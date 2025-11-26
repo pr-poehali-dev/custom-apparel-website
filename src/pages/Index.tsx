@@ -17,28 +17,33 @@ const Index = () => {
 
   const categories = [
     { id: 'all', name: 'Все категории', icon: 'LayoutGrid' },
-    { id: 'dress', name: 'Платья', icon: 'Shirt' },
-    { id: 'suit', name: 'Костюмы', icon: 'User' },
-    { id: 'coat', name: 'Пальто', icon: 'Wind' },
-    { id: 'shirt', name: 'Рубашки', icon: 'ShoppingBag' },
+    { id: 'women', name: 'Женская одежда', icon: 'User' },
+    { id: 'kids', name: 'Детская одежда', icon: 'Baby' },
   ];
 
   const fabrics = [
-    { name: 'Шёлк', price: '3000₽/м', image: 'https://images.unsplash.com/photo-1485145782098-4f5fd605a66b?w=400&h=300&fit=crop', description: 'Премиум натуральный шёлк' },
-    { name: 'Шерсть', price: '2500₽/м', image: 'https://images.unsplash.com/photo-1558769132-cb1aea279762?w=400&h=300&fit=crop', description: 'Итальянская шерсть' },
-    { name: 'Хлопок', price: '1500₽/м', image: 'https://images.unsplash.com/photo-1586105449897-20b5efeb3229?w=400&h=300&fit=crop', description: 'Премиум хлопок' },
-    { name: 'Лён', price: '2000₽/м', image: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=400&h=300&fit=crop', description: 'Льняное полотно' },
-    { name: 'Велюр', price: '2800₽/м', image: 'https://images.unsplash.com/photo-1586105251261-72a756497a11?w=400&h=300&fit=crop', description: 'Роскошный велюр' },
-    { name: 'Кашемир', price: '5000₽/м', image: 'https://images.unsplash.com/photo-1558769132-cb1aea279762?w=400&h=300&fit=crop', description: 'Элитный кашемир' },
+    { name: 'Шёлк', price: '3000₽/м', image: 'https://cdn.poehali.dev/projects/67800ec5-b419-45c6-b1fd-81600f388e3b/files/a6acb9d9-143b-482e-964b-f64e847675c0.jpg', description: 'Премиум натуральный шёлк' },
+    { name: 'Шерсть', price: '2500₽/м', image: 'https://cdn.poehali.dev/projects/67800ec5-b419-45c6-b1fd-81600f388e3b/files/d7e600aa-3ada-4dc4-91c3-c1b6bcebbc2b.jpg', description: 'Итальянская шерсть' },
+    { name: 'Хлопок', price: '1500₽/м', image: 'https://cdn.poehali.dev/projects/67800ec5-b419-45c6-b1fd-81600f388e3b/files/68fcbdba-fa03-4286-846c-1f27b40bf773.jpg', description: 'Премиум хлопок' },
+    { name: 'Лён', price: '2000₽/м', image: 'https://cdn.poehali.dev/projects/67800ec5-b419-45c6-b1fd-81600f388e3b/files/0c7e5c9f-0159-4381-afa0-8709315b368a.jpg', description: 'Льняное полотно' },
+    { name: 'Атлас', price: '2800₽/м', image: 'https://cdn.poehali.dev/projects/67800ec5-b419-45c6-b1fd-81600f388e3b/files/73281894-661c-4ac3-ba51-23fb2fb2e70f.jpg', description: 'Роскошный атлас' },
+    { name: 'Кашемир', price: '5000₽/м', image: 'https://cdn.poehali.dev/projects/67800ec5-b419-45c6-b1fd-81600f388e3b/files/cd926d07-b208-476e-9495-89967e206d4b.jpg', description: 'Элитный кашемир' },
   ];
 
   const services = [
     {
-      title: 'Индивидуальный пошив',
-      description: 'Создание одежды по вашим меркам и пожеланиям',
+      title: 'Женская одежда',
+      description: 'Индивидуальный пошив платьев, блуз, юбок и костюмов',
       price: 'от 15000₽',
-      icon: 'Scissors',
-      features: ['Снятие мерок', 'Выбор ткани', 'Примерки', 'Корректировка']
+      icon: 'User',
+      features: ['Снятие мерок', 'Наши материалы', 'Примерки', 'Корректировка']
+    },
+    {
+      title: 'Детская одежда',
+      description: 'Пошив одежды для детей от 2 лет',
+      price: 'от 8000₽',
+      icon: 'Baby',
+      features: ['Безопасные материалы', 'Учёт роста', 'Яркие дизайны', 'Прочные швы']
     },
     {
       title: 'Дизайнерские модели',
@@ -57,23 +62,23 @@ const Index = () => {
   ];
 
   const portfolio = [
-    { image: 'https://cdn.poehali.dev/projects/67800ec5-b419-45c6-b1fd-81600f388e3b/files/f0b26b8c-417c-48c9-938b-c2b52d2c3742.jpg', title: 'Вечернее платье', category: 'dress' },
-    { image: 'https://cdn.poehali.dev/projects/67800ec5-b419-45c6-b1fd-81600f388e3b/files/c6fb2c6a-3b46-4816-ba7f-2da3f22623e5.jpg', title: 'Деловой костюм', category: 'suit' },
-    { image: 'https://cdn.poehali.dev/projects/67800ec5-b419-45c6-b1fd-81600f388e3b/files/2d018371-13e5-403b-8e0e-52fb42fdaf09.jpg', title: 'Коктейльное платье', category: 'dress' },
-    { image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=600&h=800&fit=crop', title: 'Пальто', category: 'coat' },
-    { image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=800&fit=crop', title: 'Рубашка на заказ', category: 'shirt' },
-    { image: 'https://images.unsplash.com/photo-1617922001439-4a2e6562f328?w=600&h=800&fit=crop', title: 'Летнее платье', category: 'dress' },
+    { image: 'https://cdn.poehali.dev/projects/67800ec5-b419-45c6-b1fd-81600f388e3b/files/729ccdd0-3008-47dd-8ea1-40a42e4e1653.jpg', title: 'Вечернее платье', category: 'women' },
+    { image: 'https://cdn.poehali.dev/projects/67800ec5-b419-45c6-b1fd-81600f388e3b/files/34300a00-8f36-444e-b4c2-319d4d525956.jpg', title: 'Детское платье', category: 'kids' },
+    { image: 'https://cdn.poehali.dev/projects/67800ec5-b419-45c6-b1fd-81600f388e3b/files/f1a12541-d941-4e41-bb6d-bf3559053e8a.jpg', title: 'Женский костюм', category: 'women' },
+    { image: 'https://cdn.poehali.dev/projects/67800ec5-b419-45c6-b1fd-81600f388e3b/files/9d3012a4-c377-4011-bddb-65911d48cbb5.jpg', title: 'Детский комплект', category: 'kids' },
+    { image: 'https://cdn.poehali.dev/projects/67800ec5-b419-45c6-b1fd-81600f388e3b/files/f0b26b8c-417c-48c9-938b-c2b52d2c3742.jpg', title: 'Нарядное платье', category: 'women' },
+    { image: 'https://cdn.poehali.dev/projects/67800ec5-b419-45c6-b1fd-81600f388e3b/files/2d018371-13e5-403b-8e0e-52fb42fdaf09.jpg', title: 'Коктейльное платье', category: 'women' },
   ];
 
   const priceList = [
-    { service: 'Платье простое', price: '15000₽' },
+    { service: 'Платье женское простое', price: '15000₽' },
     { service: 'Платье вечернее', price: '25000₽' },
-    { service: 'Костюм мужской', price: '35000₽' },
     { service: 'Костюм женский', price: '30000₽' },
-    { service: 'Пальто', price: '40000₽' },
-    { service: 'Рубашка', price: '8000₽' },
-    { service: 'Брюки', price: '10000₽' },
-    { service: 'Юбка', price: '7000₽' },
+    { service: 'Блузка', price: '8000₽' },
+    { service: 'Юбка', price: '10000₽' },
+    { service: 'Брюки женские', price: '12000₽' },
+    { service: 'Платье детское', price: '8000₽' },
+    { service: 'Костюм детский', price: '10000₽' },
     { service: 'Доставка по Ростову', price: 'Бесплатно' },
     { service: 'Доставка по области', price: 'от 500₽' },
   ];
@@ -89,7 +94,7 @@ const Index = () => {
     },
     {
       question: 'Можно ли принести свою ткань?',
-      answer: 'Да, вы можете принести свою ткань. Мы оценим её качество и дадим рекомендации по пошиву.'
+      answer: 'Мы работаем только со своими премиум материалами, чтобы гарантировать качество. У нас большой выбор тканей на любой вкус.'
     },
     {
       question: 'Есть ли гарантия на работу?',
@@ -165,7 +170,7 @@ const Index = () => {
               Создаём одежду вашей мечты
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Профессиональное ателье с 15-летним опытом. Индивидуальный пошив, доставка на дом, премиум материалы.
+              Индивидуальный пошив женской и детской одежды от 2 лет. Премиум материалы, бесплатная доставка по Ростову.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" onClick={() => setShowMeasurements(!showMeasurements)}>
@@ -242,26 +247,25 @@ const Index = () => {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Материалы для пошива</h2>
-            <p className="text-muted-foreground text-lg">Премиум ткани от лучших производителей</p>
+            <p className="text-muted-foreground text-lg">Работаем только с премиум тканями собственного запаса</p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {fabrics.map((fabric, i) => (
-              <Card key={i} className="overflow-hidden hover:shadow-lg transition-all hover:scale-105">
-                <div className="aspect-video overflow-hidden">
+              <Card key={i} className="overflow-hidden hover:shadow-2xl transition-all hover:scale-[1.02] group border-2">
+                <div className="aspect-square overflow-hidden relative">
                   <img 
                     src={fabric.image} 
                     alt={fabric.name}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
-                <CardHeader>
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <CardTitle>{fabric.name}</CardTitle>
-                      <CardDescription>{fabric.description}</CardDescription>
-                    </div>
-                    <Badge variant="secondary">{fabric.price}</Badge>
+                <CardHeader className="relative">
+                  <div className="absolute -top-4 right-4">
+                    <Badge className="text-lg px-4 py-1 shadow-lg" variant="secondary">{fabric.price}</Badge>
                   </div>
+                  <CardTitle className="text-2xl mb-2">{fabric.name}</CardTitle>
+                  <CardDescription className="text-base">{fabric.description}</CardDescription>
                 </CardHeader>
               </Card>
             ))}
@@ -273,19 +277,29 @@ const Index = () => {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Портфолио</h2>
-            <p className="text-muted-foreground text-lg">Наши работы говорят сами за себя</p>
+            <p className="text-muted-foreground text-lg">Наши работы — женская и детская одежда от 2 лет</p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPortfolio.map((item, i) => (
-              <Card key={i} className="overflow-hidden group cursor-pointer hover:shadow-xl transition-all">
+              <Card key={i} className="overflow-hidden group cursor-pointer hover:shadow-2xl transition-all hover:-translate-y-2 border-2">
                 <div className="aspect-[3/4] overflow-hidden relative">
                   <img 
                     src={item.image} 
                     alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                    <h3 className="text-white font-semibold text-lg">{item.title}</h3>
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-secondary/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
+                    <div>
+                      <h3 className="text-white font-bold text-xl mb-1">{item.title}</h3>
+                      <Badge variant="secondary" className="bg-white/90">
+                        {item.category === 'women' ? 'Женское' : 'Детское'}
+                      </Badge>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="w-10 h-10 rounded-full bg-white/90 flex items-center justify-center">
+                      <Icon name="Eye" className="h-5 w-5 text-primary" />
+                    </div>
                   </div>
                 </div>
               </Card>
@@ -538,15 +552,15 @@ const Index = () => {
                 </span>
               </div>
               <p className="text-sm text-muted-foreground">
-                Индивидуальный пошив и доставка с 2010 года
+                Женская и детская одежда на заказ с 2010 года
               </p>
             </div>
             <div>
               <h3 className="font-semibold mb-4">Услуги</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#services" className="hover:text-primary transition-colors">Индивидуальный пошив</a></li>
-                <li><a href="#services" className="hover:text-primary transition-colors">Дизайнерские модели</a></li>
-                <li><a href="#services" className="hover:text-primary transition-colors">Доставка на дом</a></li>
+                <li><a href="#services" className="hover:text-primary transition-colors">Женская одежда</a></li>
+                <li><a href="#services" className="hover:text-primary transition-colors">Детская одежда</a></li>
+                <li><a href="#services" className="hover:text-primary transition-colors">Доставка</a></li>
               </ul>
             </div>
             <div>
