@@ -112,14 +112,29 @@ const Index = () => {
         <div className="absolute top-40 right-20 w-96 h-96 bg-secondary/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-accent/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-primary/3 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '3s' }}></div>
+        
+        <div className="absolute top-10 left-0 w-full h-32 opacity-20">
+          <div className="absolute top-0 left-0 w-64 h-32 bg-white/40 rounded-full blur-2xl animate-cloud-drift"></div>
+        </div>
+        <div className="absolute top-40 left-0 w-full h-32 opacity-15">
+          <div className="absolute top-0 left-0 w-96 h-40 bg-white/30 rounded-full blur-3xl animate-cloud-drift-slow" style={{ animationDelay: '10s' }}></div>
+        </div>
+        <div className="absolute top-72 left-0 w-full h-32 opacity-10">
+          <div className="absolute top-0 left-0 w-80 h-36 bg-white/35 rounded-full blur-2xl animate-cloud-drift-fast" style={{ animationDelay: '20s' }}></div>
+        </div>
+        <div className="absolute bottom-40 left-0 w-full h-32 opacity-20">
+          <div className="absolute top-0 left-0 w-72 h-32 bg-white/40 rounded-full blur-3xl animate-cloud-drift" style={{ animationDelay: '30s' }}></div>
+        </div>
       </div>
       <div className="relative z-10">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Icon name="Scissors" className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold">Semona</span>
-          </div>
+          <a href="#" className="flex items-center gap-2 group">
+            <Icon name="Scissors" className="h-7 w-7 text-primary transform group-hover:rotate-12 transition-transform duration-300" />
+            <span className="text-2xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent hover:scale-105 transition-transform duration-300" style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '0.05em' }}>
+              Semona
+            </span>
+          </a>
           <nav className="hidden md:flex gap-6">
             <a href="#services" className="text-sm font-medium hover:text-primary transition-colors">Услуги</a>
             <a href="#catalog" className="text-sm font-medium hover:text-primary transition-colors">Каталог</a>
@@ -517,8 +532,10 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Icon name="Scissors" className="h-6 w-6 text-primary" />
-                <span className="text-xl font-bold">Semona</span>
+                <Icon name="Scissors" className="h-7 w-7 text-primary animate-float" />
+                <span className="text-2xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent" style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '0.05em' }}>
+                  Semona
+                </span>
               </div>
               <p className="text-sm text-muted-foreground">
                 Индивидуальный пошив и доставка с 2010 года
